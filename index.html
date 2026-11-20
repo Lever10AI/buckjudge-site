@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buck Judge: Rate your eye, not the deer</title>
+<meta name="description" content="Buck Judge is a social-first mobile web app for whitetail hunters. Post a buck, call its age and gross score blind, see the crowd, then learn the truth. What gets rated is your eye.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--timber:#12160F;--under:#1C2218;--under2:#262E21;--line:#34402C;--blaze:#FF6A13;--blaze-ink:#1A0D03;--verified:#59B86B;--bone:#ECEFE6;--muted:#9AA58F;--warn:#E2B93B}
+*{box-sizing:border-box}body{margin:0;background:var(--timber);color:var(--bone);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+a{color:var(--blaze)} .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(18,22,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}.brand{display:flex;gap:12px;align-items:center;font-family:"Barlow Condensed";font-size:28px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--bone);text-decoration:none}
+.btn{display:inline-block;background:var(--blaze);color:var(--blaze-ink);font-weight:700;padding:13px 22px;border-radius:10px;text-decoration:none;min-height:44px}
+.btn.ghost{background:transparent;color:var(--bone);border:1px solid var(--line)}
+.hero{padding:72px 0 48px;text-align:left}.hero h1{font-family:"Barlow Condensed";font-size:clamp(52px,9vw,96px);line-height:.92;margin:14px 0;text-transform:uppercase}
+.hero h1 span{color:var(--blaze)} .hero p{font-size:20px;color:var(--muted);max-width:680px}
+.kicker{color:var(--blaze);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}
+.card{background:var(--under);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-family:"Barlow Condensed";font-size:28px;margin:0 0 8px;text-transform:uppercase}.card p{color:var(--muted);margin:0}
+section{padding:44px 0;border-top:1px solid var(--line)} h2{font-family:"Barlow Condensed";font-size:44px;text-transform:uppercase;margin:0 0 12px}
+.step{display:flex;gap:16px;margin:18px 0}.num{background:var(--blaze);color:var(--blaze-ink);font-weight:800;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 44px}
+.chip{display:inline-block;background:var(--under2);border:1px solid var(--line);padding:7px 12px;border-radius:999px;margin:4px;font-weight:600}
+.seal{display:inline-block;border:2px solid var(--verified);color:var(--verified);padding:6px 12px;border-radius:8px;font-weight:700;transform:rotate(-3deg)}
+.share{background:var(--under);border:1px dashed var(--line);border-radius:14px;padding:18px;font-size:18px}
+footer{padding:36px 0 56px;color:var(--muted);border-top:1px solid var(--line)} .small{font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><img src="logo.svg" alt="" width="42" height="42"> Buck Judge</a>
+<nav><a class="btn" href="#beta">Join the beta list</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+<div class="kicker">Coming soon: MVP beta Jan to Mar 2027</div>
+<h1>Rate your eye,<br><span>not the deer.</span></h1>
+<p>Anyone posts a buck. The community calls its age and gross antler score blind, then sees the crowd, and later the truth. Your status is how sharp your eye is, never how big the deer was.</p>
+<p><a class="btn" href="#how">How it works</a> <a class="btn ghost" href="#botd">Buck of the Day</a></p>
+<div><span class="chip">Blind calls</span><span class="chip">Verified answers only on leaderboards</span><span class="chip">No GPS, county level max</span><span class="chip">First deer and youth: celebrate only</span></div>
+</div>
+
+<section id="how"><h2>The core loop</h2>
+<div class="step"><div class="num">1</div><div><strong>Post</strong><p class="small">1 to 5 photos: trail cam, harvest, or shed. State, optional county, optional story. Photo location data is stripped.</p></div></div>
+<div class="step"><div class="num">2</div><div><strong>Call it blind</strong><p class="small">Age class chips (1.5, 2.5, 3.5, 4.5, 5.5+) and a gross score slider. You see nothing about other calls until you make yours. One call per buck, ever.</p></div></div>
+<div class="step"><div class="num">3</div><div><strong>Crowd reveal</strong><p class="small">See the age distribution and score range next to your call.</p></div></div>
+<div class="step"><div class="num">4</div><div><strong>Verify</strong><p class="small">The owner adds the truth: tape, jawbone or lab, or an official Boone and Crockett / Pope and Young entry. <span class="seal">Verified</span></p></div></div>
+<div class="step"><div class="num">5</div><div><strong>Eye Rating</strong><p class="small">Points, exact age percentage, and average score miss. Only verified bucks count toward points and leaderboards.</p></div></div>
+</section>
+
+<section id="botd"><h2>Buck of the Day</h2>
+<p class="small" style="font-size:17px;max-width:720px">One interesting buck, picked daily from the feed, that everyone calls at the same time. Released 6am local, revealed 8pm local. Spoiler free share cards, Wordle style:</p>
+<div class="share">🦌 Buck Judge #212 · Age 🟩 · Score 🟨 ±6"</div>
+<div class="grid">
+<div class="card"><h3>Open feed</h3><p>Anyone posts and gets fast feedback from the crowd, fewest calls first.</p></div>
+<div class="card"><h3>Buck of the Day</h3><p>A shared daily moment, curated from verified bucks with few views so the answer is not spoiled.</p></div>
+<div class="card"><h3>Throwback Buck</h3><p>Off season, past seasons verified bucks keep the daily habit alive.</p></div>
+</div>
+</section>
+
+<section><h2>Ranks: earn your eye</h2>
+<div><span class="chip">Rookie Judge</span><span class="chip">Spotter</span><span class="chip">Field Judge</span><span class="chip">Master Scorer</span><span class="chip">Head Judge</span></div>
+<p class="small">Harder bucks weigh more. Verified answers count triple. No size based status for posters, no unverified scores on leaderboards, no fake calls.</p>
+</section>
+
+<section><h2>Built to protect hunters</h2>
+<div class="grid">
+<div class="card"><h3>No GPS</h3><p>Location is state and county only, typed by you. Photo metadata is stripped on device and server.</p></div>
+<div class="card"><h3>Private by default</h3><p>Login required beyond this page. Harvest photos are never visible logged out, and share cards use a crop.</p></div>
+<div class="card"><h3>No buck shaming</h3><p>No free text comments at launch. Preset reactions only. First deer and youth posts are celebrate only, with no calls.</p></div>
+</div>
+</section>
+
+<section id="beta"><h2>Beta timeline</h2>
+<div class="grid">
+<div class="card"><h3>Jan to Mar 2027</h3><p>MVP beta: post, blind call, reveal, verify, Buck of the Day, leaderboards. Shed and off season content.</p></div>
+<div class="card"><h3>Aug to Sept 2027</h3><p>Season launch: push, leagues, Buck Profiles, private groups for camps and leases, season events.</p></div>
+<div class="card"><h3>2028</h3><p>Pro tier, native apps, and new species.</p></div>
+</div>
+<p>Want in? Domain and social handles are being secured first. Check back here for the beta signup once buckjudge.com is live.</p>
+</section>
+</main>
+<footer><div class="wrap">
+<p><strong style="color:var(--bone)">Buck Judge</strong> · A Lever10AI project · Planning stage, not yet launched.</p>
+<p class="small">Theme: Blaze and Timber. One action color, hunter orange. Built for low glare before dawn in a stand.</p>
+</div></footer>
+</body>
+</html>
